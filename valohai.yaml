@@ -1,16 +1,25 @@
 ---
-
 - step:
-    name: Worker environment check
-    image: dcarnino/docker-tensorflow-object-detection
+    name: train-model
+    image: tensorflow/tensorflow:2.6.0
     command:
-      - pwd
-      - ls -la
-      - ls /tensorflow/
-      - nvidia-smi
-      - python --version
-      - nvcc --version | grep release
-      - cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
-      - cd /tensorflow/models/research/
-      - export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
-      - wget https://www.mediafire.com/file/kzxspjxw9t41o77/loli/file?dkey=aiv5r4830dt517
+      - pip install valohai-utils
+      - pip install -r requirements.txt
+      - python ./train_model.py {parameters}
+      - /usr/bin/python3 -m pip install --upgrade pip
+    parameters:
+      - name: epochs
+        default: 5
+        type: integer
+      - name: learning_rate
+        default: 0.001
+        type: float
+    inputs:
+      - name: dataset_train
+        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/mbtr_train.npy'
+      - name: dataset_train_sasa
+        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/sasa_train.npy'
+      - name: dataset_test
+        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/mbtr_test.npy'
+      - name: dataset_test_sasa
+        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/sasa_test.npy'
