@@ -16,10 +16,4 @@
         type: float
     inputs:
       - name: dataset_train
-        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/mbtr_train.npy'
-      - name: dataset_train_sasa
-        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/sasa_train.npy'
-      - name: dataset_test
-        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/mbtr_test.npy'
-      - name: dataset_test_sasa
-        default: 'https://raw.githubusercontent.com/Evonano-Valohai/MBTR-SASA-model/main/sasa_test.npy'
+        default: 'https://gitlab.com/anabsjs80/josss/-/raw/main/loli'
